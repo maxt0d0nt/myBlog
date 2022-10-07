@@ -7,12 +7,12 @@ import './Home.css'
 export const Home = () => {
   return (
     <>
-    < Header />
-    <div className='home'>
-    < Post />
-      < Sidebar />
-    </div>
+      < Header />
+      <div className='home'>
+        < Post />
+        < Sidebar />
+      </div>
     </>
-   
+
   )
 }

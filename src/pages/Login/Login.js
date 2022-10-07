@@ -1,5 +1,7 @@
 import React from 'react';
-import './Login.css'
+import './Login.css';
+import { Link } from 'react-router-dom'
+
 
 export const Login = () => {
     return (
@@ -12,7 +14,9 @@ export const Login = () => {
                     <label>Password</label>
                     <input type="password" className='loginInput' placeholder="Introduzca su contraseña" />
                 </form>
-                <button className="loginRegisterButton">Registrarse</button>
+                <button className="loginRegisterButton">
+                    <Link to={"/register"}>Registrarse</Link>
+                </button>
                 <button className="loginButton">Login</button>
             </div>
         </>

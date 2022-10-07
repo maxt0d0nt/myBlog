@@ -47,11 +47,57 @@
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
+    padding: 0 5px;
+    
+}
+
+.topListItemLogin {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #A9F0D1;
+    border-radius: 10px;
+    
+}
+
+.topListItemRegister {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #8C5E58;
+    border-radius: 10px;
+    
+}
+
+#link:hover {
+    border-bottom: 2px solid #666;
+    transform: scale(1.2);
+    
+}
+
+.link {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+  color: inherit;
+  
+  }
+
+.topListItem:hover {
+    border-bottom: 2px solid #666;
+    transform: scale(1.5);
+    
 }
 
 .topSearchIcon {
     font-size: 18px;
     color: #666;
     cursor: pointer;
-    margin-left: 15px;
+    margin-right: 40px;
 }
