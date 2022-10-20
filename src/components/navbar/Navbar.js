@@ -19,21 +19,19 @@ export const Navbar = () => {
                             <Link to={"/"}>HOME</Link>
                         </li>
                         <li className='topListItem'>
-                            <Link to={"/about"}>ABOUT</Link>
+                            <Link to={"/about"}>¿QUIEN SOMOS?</Link>
                         </li>
                         <li className='topListItem'>
-                            <Link to={"/"}>CONTACT</Link>
+                            <Link to={"/"}>CONTACTO</Link>
                         </li>
-                        <li className='topListItem'>
-                            <Link to={"/write"}>WRITE</Link>
-                        </li>
+                        
                         <li className='topListItem'>
                             {user && "LOGOUT"}
                         </li>
                     </ul>
                 </div>
-                <div className='topRight'>
-                    {user ? (
+               <div className='topRight'>
+                  {/*user ? (
                             <img
                                 className='topImg'
                                 src='https://images.unsplash.com/photo-1608042245074-36b1114bec2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80'
@@ -48,7 +46,7 @@ export const Navbar = () => {
                                     <Link to={"/register"}>REGISTER</Link>
                                 </li>
                             </ul>
-                        )}
+                        )*/}
                     <i className='topSearchIcon fas fa-search'></i>
                 </div>
             </div>
