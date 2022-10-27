@@ -2,18 +2,14 @@ import React from 'react'
 import { AddPost } from '../AddPost/AddPost'
 import './Post.css'
 
-export const Post = () => {
+export const Post = ({posts}) => {
   return (
     <>
    <div className='post'>
-   < AddPost />
-   < AddPost />
-   < AddPost />
-   < AddPost />
-   < AddPost />
-   < AddPost />
-   < AddPost />
-   < AddPost />
+  {posts.map((p) => (
+
+  <AddPost post={p}/>
+  ))}
 
    </div>
     </>
