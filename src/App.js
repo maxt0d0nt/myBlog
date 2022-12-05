@@ -10,9 +10,11 @@ import {
   Route,
   Routes
 } from "react-router-dom";
+import { useContext } from 'react';
+import { Context } from './context/Context';
 
 function App() {
-  const user = true;
+  const {user} = useContext(Context)
   return (
     
     <>
@@ -20,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={< Home />}exact />
         <Route path="/register" element={user ? <Register /> : <Home/> } />
-        <Route path="/login" element={user ? <Login />: <Home/> } />
+        <Route path="/login" element={user ? <Login />: <Login/> } />
         <Route path="/settings" element= {user ? <Settings /> : <Login />}  />
         <Route path="/post/:postId" element={<Single/>} />
         <Route path="/write"  element={user ? <Write /> : <Login />} />

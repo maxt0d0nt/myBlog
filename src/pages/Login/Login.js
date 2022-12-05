@@ -33,7 +33,7 @@ try {
                         <input ref={userRef} type="text" className='loginInput' placeholder="Introduzca su email..." />
                         <label>Password</label>
                         <input ref={passwordRef} type="password" className='loginInput' placeholder="Introduzca su contraseña" />
-                        <button className="loginButton" type='submit'>Login</button>
+                        <button className="loginButton" type='submit' disabled={isFetching}>Login</button>
                     </form>
                     <button className="loginRegisterButton">
                         <Link to={"/register"}>Registrarse</Link>

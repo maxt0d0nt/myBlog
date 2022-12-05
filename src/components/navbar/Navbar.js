@@ -1,10 +1,16 @@
 import './Navbar.css'
 
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Context } from '../../context/Context';
 
 export const Navbar = () => {
-    const user = false;
+    const {user, dispatch} = useContext(Context)
+
+    const handleLogout = () => {
+       dispatch({ type: "LOGOUT"})
+    }
     return (
         <>
             <div className='top'>
@@ -25,7 +31,7 @@ export const Navbar = () => {
                             <Link to={"/"}>CONTACTO</Link>
                         </li>
                         
-                        <li className='topListItem'>
+                        <li className='topListItem' onClick={handleLogout}>
                             {user && "LOGOUT"}
                         </li>
                     </ul>
@@ -34,7 +40,7 @@ export const Navbar = () => {
                   {user ? (
                             <img
                                 className='topImg'
-                                src='https://images.unsplash.com/photo-1608042245074-36b1114bec2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80'
+                                src={user.profilePic}
                                 alt='topImg'
                             />
                         ) : (
