@@ -25,6 +25,7 @@ useEffect(() => {
                 dispatch,
             }}>
             {children}
+            
         </Context.Provider>
     )
 }
