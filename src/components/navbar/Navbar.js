@@ -6,6 +6,8 @@ import { useContext } from 'react';
 import { Context } from '../../context/Context';
 
 export const Navbar = () => {
+
+    
     const {user, dispatch} = useContext(Context)
 
     const handleLogout = () => {
@@ -30,6 +32,12 @@ export const Navbar = () => {
                         <li className='topListItem'>
                             <Link to={"/"}>CONTACTO</Link>
                         </li>
+
+                        <li className='topListItem'>
+                        <Link to={"/write"}>
+                            {user && "WRITE"}
+                            </Link>
+                        </li>
                         
                         <li className='topListItem' onClick={handleLogout}>
                             {user && "LOGOUT"}
@@ -38,11 +46,13 @@ export const Navbar = () => {
                 </div>
                <div className='topRight'>
                   {user ? (
+                    < Link to="/settings">
                             <img
                                 className='topImg'
                                 src={user.profilePic}
                                 alt='topImg'
                             />
+                            </Link>
                         ) : (
                             <ul className='topList'>
                                 <li className='topListItemLogin' id='link'>
